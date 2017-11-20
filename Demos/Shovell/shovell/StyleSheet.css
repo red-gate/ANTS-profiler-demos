@@ -1,0 +1,350 @@
+﻿.LV_validation_message
+{
+	font-size: small;
+    font-weight:bold;
+    margin:0 0 0 1px;
+}
+
+.LV_valid 
+{
+    color:#00CC00;
+}
+	
+.LV_invalid 
+{
+    color:#CC0000;
+}
+    
+.LV_valid_field,
+input.LV_valid_field:hover, 
+input.LV_valid_field:active,
+textarea.LV_valid_field:hover, 
+textarea.LV_valid_field:active 
+{
+    border: 1px solid #00CC00;
+}
+    
+.LV_invalid_field, 
+input.LV_invalid_field:hover, 
+input.LV_invalid_field:active,
+textarea.LV_invalid_field:hover, 
+textarea.LV_invalid_field:active 
+{
+    border: 1px solid #CC0000;
+}
+
+#xsmall
+{
+	font-size: x-small;
+}
+
+#Approved
+{
+	color: #009900;
+}
+
+#Rejected
+{
+	color: #FF0000;
+}
+
+#ApprovedLink
+{
+	color: #009900;
+	text-decoration: underline;
+}
+
+#RejectedLink
+{
+	color: #FF0000;
+	text-decoration: underline;
+}
+
+#ApprovedLink:hover
+{
+	color: #009900;
+	text-decoration: none;
+}
+
+#RejectedLink:hover
+{
+	color: #FF0000;
+	text-decoration: none;
+}
+
+
+.WhiteItem
+{
+	border-style: solid;
+	border-width: 1px 0px 1px 0px;
+	border-color: #CCCCCC;
+	background-color: #FFFFFF;
+}
+
+#BlueItem
+{
+	border-style: solid;
+	border-width: 1px 0px 1px 0px;
+	border-color: #CCCCCC;
+	background-color: #F4F8FF;
+}
+
+.VotesTotal
+{
+	color: Red;
+	font-size: medium;
+	font-weight: bold;
+	font-family: Tahoma;
+	text-align: center;
+}
+
+.VotesBox
+{
+float: left; 
+left: 5px; 
+padding: 6px 0 0 1px	
+}
+
+.SuggestionInput
+{
+	float: left;
+	width: 98%;
+	padding: 10px;
+	background-color: #F4F8FF;
+	border: solid 1px black;
+}
+
+.SuggestionTextBox
+{
+float:left;
+margin: 0px 0px 0px 5px;
+width: 80%;	
+}
+
+.floatright
+{
+	float: right;
+	margin: 0px 0px 10px 10px;
+	border: 1px solid #666;
+	padding: 2px;
+}
+
+#NewIcon
+{
+	float: left; 
+	margin-right: 10px
+}
+
+#NewText
+{
+float:left; 
+width: 95%;
+margin-bottom: 10px;
+}
+
+#divLeft {
+	margin: 0px;
+	padding: 0px;
+	width: 20px;
+	background-color: #FF0000;
+	float: left;
+}
+#divRight {
+	margin: 0px;
+	padding: 0px;
+	width: 180px;
+	background-color: #0000FF;
+	float: left;
+}
+
+.commentimage
+{
+	float: left;
+	padding: 2px;
+}
+
+#menuRight
+{
+    padding: 0 0 0px;
+    margin: 0;
+    text-align: right;
+    float: right;
+    clear:both;
+}	
+
+#menuLeft
+{
+    padding: 0 0 0px;
+    margin: 0;
+    text-align: left;
+    float: left
+}	
+
+
+body
+{
+	font-family: Tahoma;
+	margin: 0;
+	padding: 0;
+	color: #515151;
+}
+
+img
+{
+	border: 0;
+}
+
+a:link
+{
+    color: #034af3;
+    text-decoration: underline;
+}
+a:visited
+{
+    color: #505abc;
+}
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+a:active
+{
+    color: #12eb87;
+}
+
+p, ul
+{
+    margin: 0px;
+}
+
+/* HEADINGS   
+----------------------------------------------------------*/
+h1, h2, h3, h4, h5, h6
+{
+    font-size: 1.5em;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+}
+
+h1
+{
+    font-size: 1.5em;
+    padding-bottom: 0;
+}
+h2
+{
+    font-size: 1.3em;
+}
+h3
+{
+    font-size: 1.2em;
+}
+h4
+{
+    font-size: 1.1em;
+}
+h5, h6
+{
+    font-size: 1em;
+}
+
+/* this rule styles <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+    margin-top: 0;
+}
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+/* you can specify a greater or lesser percentage for the 
+page width. Or, you can specify an exact pixel width. */
+.page
+{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header
+{
+	position: relative;
+	margin-bottom: 0px;
+	height: 100px;
+	color: #000;
+	padding: 0 0px 0 0;
+}
+
+#content
+{
+width: 100%;	
+}
+
+.suggestionTitle
+{
+    position: relative;
+    margin: 2px 0px 2px 0px;
+    padding: 0 0px 0 0;
+}
+
+#headerArticle .suggestionTitle
+{
+	color: Red;
+}
+
+p#logo, h1#logo
+{
+    font-weight: bold;
+    font-size: 24px !important;
+    padding: 10px 0;
+    margin: 0;
+    color: #FFF;
+    border: none;
+    line-height: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#logo a
+{
+    color: #FFF;
+    text-decoration: none;
+    font-size: 32px !important;
+    float: left;
+}
+
+
+#login
+{
+    padding: 0 0 0px;
+    margin: 0;
+    text-align: right;
+    float: right;
+}	
+
+#main
+{
+	margin-top: 10px;
+    padding: 30px 30px 15px 30px;
+    background-color: #FFF;
+    margin-bottom: 30px;
+    _height: 1px; /* only IE6 applies CSS properties starting with an underscrore */
+}
+
+#footer
+{
+    color: #999;
+    padding: 25px 0 0 0;
+    text-align: center;
+    line-height: normal;
+}
+
+#footer p
+{
+    padding: 5px 0;
+    margin: 0;
+    font-size: .9em;
+}
+

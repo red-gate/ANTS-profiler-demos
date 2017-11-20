@@ -1,0 +1,41 @@
+<%@ Master Language="C#" AutoEventWireup="true" Inherits="MasterPage" Codebehind="MasterPage.master.cs" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Shovell</title>
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="page">
+            <div id="header">
+                    
+                <div id="login">
+                    <asp:LoginView ID="m_loginLogin" runat="server">
+                        <LoggedInTemplate>
+                            <asp:Label ID="m_labelLoggedInAs" runat="server" Text="Logged in as "></asp:Label>
+                            <asp:LoginName ID="m_loginName" runat="server" />
+                            <asp:LoginStatus ID="m_logout" runat="server" />
+                        </LoggedInTemplate>
+                        <AnonymousTemplate>
+                            <asp:Login ID="m_loginDialog" runat="server"></asp:Login>
+                        </AnonymousTemplate>
+                    </asp:LoginView>
+                </div>
+                <img id="logo" src="Content/Logo.gif" alt="Logo"/>
+                <div>
+                    <a id="menuRight" href="Default.aspx"><img  src="Content/Home.gif"  alt="Home.gif"  /></a>
+                    <h4 id="menuLeft">Welcome to Shovell News Site</h4>
+                </div>
+            </div>
+            <div id="main">
+                <div id="content">
+                    <asp:contentplaceholder id="m_content" runat="server"></asp:contentplaceholder>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

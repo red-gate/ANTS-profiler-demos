@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>
+        
+    About Us
+
+    </title>
+    <link href="/Content/Site.css" rel="stylesheet" type="text/css" />
+    <script src="/Scripts/jquery-1.4.1.js" type="text/javascript"></script>
+    <script src="/Scripts/MicrosoftAjax.js" type="text/javascript"></script>
+    <script src="/Scripts/MicrosoftMvcAjax.js" type="text/javascript"></script>
+    <script src="/Scripts/MicrosoftMvcValidation.js" type="text/javascript"></script>
+    <script src="/Scripts/corner/jquery.corner.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $("document").ready(function () { corners() });
+        function corners() {
+            var t = " ";
+            if ($.browser.msie) {
+                t = " top ";
+            }
+            if ($(".displayContainerInner")[0]) {
+                $(".displayContainerInner").corner("bevel" + t + "5px").parent().css('padding', '3px').corner("round" + t + "keep 10px");
+            }
+        }
+          
+    </script>
+    
+    <script type="text/javascript">
+
+        $(document).ready(function () { corners(); });
+
+        function corners() {
+            $(".displayContainerInner").corner("bevel 5px").parent().css('padding', '3px').corner("round keep  10px");
+        }
+
+    </script>
+
+</head>
+<body>
+    <div class="page">
+        <div id="header">
+            <div id="title">
+                <div style="height: 100%">
+                    &nbsp;</div>
+                <img alt="TicketDesk 2.0" src="/Content/TicketDesk2Logo.png" />
+            </div>
+            <div style="margin-left: 245px;">
+                <div id="logindisplay" style="height: 40px;">
+                    
+&nbsp;
+
+[
+<a href="/Account/LogOn">Log On</a>
+]
+
+                </div>
+                <div id="menucontainer">
+                    
+                    <ul id="menu">
+                        
+                        <li>
+                            <a href="/">Home</a></li>
+                        
+                        <li>
+                            <a href="/TicketCenter">Ticket Center</a></li>
+                        <li>
+                            <a href="/NewTicket">New Ticket</a></li>
+                        <li class="selectedMenuItem">
+                            <a href="/Home/About">About</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clear;">
+                </div>
+            </div>
+        </div>
+        <div id="main">
+            
+    
+    <div class="contentContainer">
+        <div style="max-width: 600px; margin: auto;">
+            <div class="displayContainerOuter">
+                <div class="displayContainerInner" style="width: 100%;">
+                    <div>
+                        <div class="activityHeadWrapper">
+                            <div class="activityHead">
+                                About TicketDesk 2.1
+                            </div>
+                        </div>
+                        <div class="activityBody" style="padding: 15px; min-height: 200px;">
+                            <p>
+                                <a href="http://ticketdesk.codeplex.com">TicketDesk 2.1</a> is an open source project hosted on <a href="http://codeplex.com">CodePlex</a> and maintained by Stephen Redd.
+                            </p>
+                            <p>
+                                This version deliberately introduces numerous performance issues to demonstrate the sorts of problems which can be experienced when writing ASP.NET applications.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            
+        </div>
+    </div>
+<script type='text/javascript' src='/Glimpse.axd?n=glimpse_client&amp;hash=c38ea6bc'></script><script type='text/javascript' src='/Glimpse.axd?n=glimpse_metadata&amp;hash=c38ea6bc&amp;callback=glimpse.data.initMetadata'></script><script type='text/javascript' src='/Glimpse.axd?n=glimpse_request&amp;requestId=8ab1a9e2-8b07-4e87-add9-7f7fe8d8d277&amp;hash=c38ea6bc&amp;callback=glimpse.data.initData'></script></body>
+</html>

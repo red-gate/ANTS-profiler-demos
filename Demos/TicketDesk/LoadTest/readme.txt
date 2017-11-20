@@ -1,0 +1,1 @@
+First copy tinyget.exe to C:\Program Files (x86)\IIS Resources\TinyGet\

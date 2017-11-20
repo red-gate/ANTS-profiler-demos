@@ -1,0 +1,1 @@
+wsdl /language:C# /out:ProxyClass.cs http://localhost/shovell/webservice.asmx?WSDL
