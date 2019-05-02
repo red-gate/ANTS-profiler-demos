@@ -1,8 +1,9 @@
-# Performs a drop and recreate of the Library Manager database and inserts test data
+# Performs a drop and recreate of the LibraryManager database and uses SQL Data Generator to insert test data
 
 ####################   REQUIREMENTS   ####################
 # Assumes target database is on local instance with name LibraryManager. If this is not true, update the App.Config too.
 # For SQL Data Generator it is assumed that Redgate SQL Data Generaotor v4 is installed and the path to DataGenerator.exe is added to your PATH system variable
+# Requires 6 GB of free disk space
 ##########################################################
 
 $ErrorActionPreference = "Stop"
@@ -26,7 +27,7 @@ Write-Host "Deploying DB scripts in $databaseDir to database $databaseName on se
 Sync-DatabaseSchema -Source $databaseDir -Target $targetDb
 
 # Insert data using SQL Data Generator. Lots of data to simulate performance issues in APP demo.
-Write-Warning "Inserting 20,000,000 rows of test data to database $databaseName on server $ServerInstance with SQL Data Generator."
+Write-Warning "Inserting 20,000,000 rows of test data to database $databaseName on server $ServerInstance with SQL Data Generator. (About 6 GB)."
 Write-Warning "(This might take a while. Probably about 20 mins on an average spec VM.)"
 $dataGenProjFile = Join-Path -Path $myDir -ChildPath "DataGeneration.sqlgen" 
 SQLDataGenerator.exe /project:$dataGenProjFile
