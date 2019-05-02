@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--
-SQL Data Generator 3
+SQL Data Generator 4
 SQL Data Generator
-Version:3.0.1.560-->
+Version:4.1.2.1680-->
 <Project version="2" type="SDGProject">
-  <DataSource version="3" type="LiveDatabaseSource">
-    <ServerName>.\sql2014</ServerName>
+  <DataSource version="4" type="LiveDatabaseSource">
+    <ServerName>(local)</ServerName>
     <DatabaseName>LibraryManager</DatabaseName>
     <Username />
     <SavePassword>False</SavePassword>
     <Password />
     <ScriptFolderLocation />
     <MigrationsFolderLocation />
-    <IntegratedSecurity>True</IntegratedSecurity>
+    <AuthenticationType>WindowsIntegrated</AuthenticationType>
   </DataSource>
   <Tables type="List&lt;SDGTable&gt;" version="1">
-    <value version="1" type="SDGTable">
+    <value version="3" type="SDGTable">
       <TableType>Generated</TableType>
-      <PopulationDetails version="1" type="PopulationDetails">
+      <PopulationDetails version="2" type="PopulationDetails">
         <PopulationType>RowCount</PopulationType>
         <RowCount>24693</RowCount>
         <ProportionTableExists>False</ProportionTableExists>
@@ -29,6 +29,8 @@ Version:3.0.1.560-->
       <Append>True</Append>
       <Name>BookInstances</Name>
       <Schema>dbo</Schema>
+      <IsTemporal>False</IsTemporal>
+      <IdentityInsert>False</IdentityInsert>
       <Fields type="List&lt;SDGField&gt;" version="1">
         <value version="1" type="SDGField">
           <Name>Id</Name>
@@ -88,12 +90,8 @@ Version:3.0.1.560-->
                 <value type="string">[0-9]{5}</value>
               </element>
               <element>
-                <key type="string">Unique</key>
-                <value type="string">True</value>
-              </element>
-              <element>
-                <key type="string">Seed</key>
-                <value type="string">2</value>
+                <key type="string">UseSequence</key>
+                <value type="string">False</value>
               </element>
               <element>
                 <key type="string">NullsAllowed</key>
@@ -104,8 +102,12 @@ Version:3.0.1.560-->
                 <value type="string">0.01</value>
               </element>
               <element>
-                <key type="string">UseSequence</key>
-                <value type="string">False</value>
+                <key type="string">Seed</key>
+                <value type="string">2</value>
+              </element>
+              <element>
+                <key type="string">Unique</key>
+                <value type="string">True</value>
               </element>
             </GeneratorProperties>
           </Generator>
@@ -152,10 +154,6 @@ Version:3.0.1.560-->
                 <value type="string">False</value>
               </element>
               <element>
-                <key type="string">Seed</key>
-                <value type="string">3</value>
-              </element>
-              <element>
                 <key type="string">NullsAllowed</key>
                 <value type="string">False</value>
               </element>
@@ -163,12 +161,16 @@ Version:3.0.1.560-->
                 <key type="string">NullProportion</key>
                 <value type="string">0.01</value>
               </element>
+              <element>
+                <key type="string">Seed</key>
+                <value type="string">3</value>
+              </element>
             </GeneratorProperties>
           </Generator>
         </value>
       </Fields>
       <ForeignKeyProperties type="List&lt;ForeignKeyProperty&gt;" version="1">
-        <value version="1" type="ForeignKeyProperty">
+        <value version="2" type="ForeignKeyProperty">
           <Fields type="List&lt;string&gt;" version="1">
             <value type="string">BookId</value>
           </Fields>
@@ -182,9 +184,9 @@ Version:3.0.1.560-->
         </value>
       </ForeignKeyProperties>
     </value>
-    <value version="1" type="SDGTable">
+    <value version="3" type="SDGTable">
       <TableType>Generated</TableType>
-      <PopulationDetails version="1" type="PopulationDetails">
+      <PopulationDetails version="2" type="PopulationDetails">
         <PopulationType>RowCount</PopulationType>
         <RowCount>6103</RowCount>
         <ProportionTableExists>False</ProportionTableExists>
@@ -196,6 +198,8 @@ Version:3.0.1.560-->
       <Append>True</Append>
       <Name>Books</Name>
       <Schema>dbo</Schema>
+      <IsTemporal>False</IsTemporal>
+      <IdentityInsert>False</IdentityInsert>
       <Fields type="List&lt;SDGField&gt;" version="1">
         <value version="1" type="SDGField">
           <Name>Id</Name>
@@ -239,16 +243,16 @@ Version:3.0.1.560-->
                 <value type="string">25</value>
               </element>
               <element>
-                <key type="string">Seed</key>
-                <value type="string">1025</value>
-              </element>
-              <element>
                 <key type="string">NullsAllowed</key>
                 <value type="string">False</value>
               </element>
               <element>
                 <key type="string">NullProportion</key>
                 <value type="string">0.01</value>
+              </element>
+              <element>
+                <key type="string">Seed</key>
+                <value type="string">1025</value>
               </element>
             </GeneratorProperties>
           </Generator>
@@ -303,16 +307,16 @@ Version:3.0.1.560-->
                 <value type="string">True</value>
               </element>
               <element>
-                <key type="string">Seed</key>
-                <value type="string">1026</value>
-              </element>
-              <element>
                 <key type="string">NullsAllowed</key>
                 <value type="string">False</value>
               </element>
               <element>
                 <key type="string">NullProportion</key>
                 <value type="string">0.01</value>
+              </element>
+              <element>
+                <key type="string">Seed</key>
+                <value type="string">1026</value>
               </element>
             </GeneratorProperties>
           </Generator>
@@ -339,12 +343,8 @@ Version:3.0.1.560-->
                 <value type="string">[0-9]{3}-[0-9]-[0-9]{2}-[0-9]{6}-[0-9]</value>
               </element>
               <element>
-                <key type="string">Unique</key>
+                <key type="string">UseSequence</key>
                 <value type="string">False</value>
-              </element>
-              <element>
-                <key type="string">Seed</key>
-                <value type="string">1027</value>
               </element>
               <element>
                 <key type="string">NullsAllowed</key>
@@ -355,7 +355,11 @@ Version:3.0.1.560-->
                 <value type="string">0.01</value>
               </element>
               <element>
-                <key type="string">UseSequence</key>
+                <key type="string">Seed</key>
+                <value type="string">1027</value>
+              </element>
+              <element>
+                <key type="string">Unique</key>
                 <value type="string">False</value>
               </element>
             </GeneratorProperties>
@@ -364,9 +368,9 @@ Version:3.0.1.560-->
       </Fields>
       <ForeignKeyProperties type="List&lt;ForeignKeyProperty&gt;" version="1" />
     </value>
-    <value version="1" type="SDGTable">
+    <value version="3" type="SDGTable">
       <TableType>Generated</TableType>
-      <PopulationDetails version="1" type="PopulationDetails">
+      <PopulationDetails version="2" type="PopulationDetails">
         <PopulationType>RowCount</PopulationType>
         <RowCount>98612</RowCount>
         <ProportionTableExists>False</ProportionTableExists>
@@ -378,6 +382,8 @@ Version:3.0.1.560-->
       <Append>True</Append>
       <Name>Loans</Name>
       <Schema>dbo</Schema>
+      <IsTemporal>False</IsTemporal>
+      <IdentityInsert>False</IdentityInsert>
       <Fields type="List&lt;SDGField&gt;" version="1">
         <value version="1" type="SDGField">
           <Name>Id</Name>
@@ -485,16 +491,16 @@ Version:3.0.1.560-->
                 <value type="string">False</value>
               </element>
               <element>
-                <key type="string">Seed</key>
-                <value type="string">2050</value>
-              </element>
-              <element>
                 <key type="string">NullsAllowed</key>
                 <value type="string">False</value>
               </element>
               <element>
                 <key type="string">NullProportion</key>
                 <value type="string">0.01</value>
+              </element>
+              <element>
+                <key type="string">Seed</key>
+                <value type="string">2050</value>
               </element>
             </GeneratorProperties>
           </Generator>
@@ -569,16 +575,16 @@ Version:3.0.1.560-->
                 <value type="string">True</value>
               </element>
               <element>
-                <key type="string">Seed</key>
-                <value type="string">2051</value>
-              </element>
-              <element>
                 <key type="string">NullsAllowed</key>
                 <value type="string">False</value>
               </element>
               <element>
                 <key type="string">NullProportion</key>
                 <value type="string">0.01</value>
+              </element>
+              <element>
+                <key type="string">Seed</key>
+                <value type="string">2051</value>
               </element>
             </GeneratorProperties>
           </Generator>
@@ -625,16 +631,16 @@ Version:3.0.1.560-->
                 <value type="string">False</value>
               </element>
               <element>
-                <key type="string">Seed</key>
-                <value type="string">2052</value>
-              </element>
-              <element>
                 <key type="string">NullsAllowed</key>
                 <value type="string">True</value>
               </element>
               <element>
                 <key type="string">NullProportion</key>
                 <value type="string">0.9</value>
+              </element>
+              <element>
+                <key type="string">Seed</key>
+                <value type="string">2052</value>
               </element>
             </GeneratorProperties>
           </Generator>
@@ -705,16 +711,16 @@ Version:3.0.1.560-->
                 <value type="string">False</value>
               </element>
               <element>
-                <key type="string">Seed</key>
-                <value type="string">2054</value>
-              </element>
-              <element>
                 <key type="string">NullsAllowed</key>
                 <value type="string">False</value>
               </element>
               <element>
                 <key type="string">NullProportion</key>
                 <value type="string">0.01</value>
+              </element>
+              <element>
+                <key type="string">Seed</key>
+                <value type="string">2054</value>
               </element>
             </GeneratorProperties>
           </Generator>
@@ -761,10 +767,6 @@ Version:3.0.1.560-->
                 <value type="string">False</value>
               </element>
               <element>
-                <key type="string">Seed</key>
-                <value type="string">2055</value>
-              </element>
-              <element>
                 <key type="string">NullsAllowed</key>
                 <value type="string">False</value>
               </element>
@@ -772,12 +774,16 @@ Version:3.0.1.560-->
                 <key type="string">NullProportion</key>
                 <value type="string">0.01</value>
               </element>
+              <element>
+                <key type="string">Seed</key>
+                <value type="string">2055</value>
+              </element>
             </GeneratorProperties>
           </Generator>
         </value>
       </Fields>
       <ForeignKeyProperties type="List&lt;ForeignKeyProperty&gt;" version="1">
-        <value version="1" type="ForeignKeyProperty">
+        <value version="2" type="ForeignKeyProperty">
           <Fields type="List&lt;string&gt;" version="1">
             <value type="string">BookInstanceId</value>
           </Fields>
@@ -789,7 +795,7 @@ Version:3.0.1.560-->
           <NullsAllowed>False</NullsAllowed>
           <NullProportion>0.01</NullProportion>
         </value>
-        <value version="1" type="ForeignKeyProperty">
+        <value version="2" type="ForeignKeyProperty">
           <Fields type="List&lt;string&gt;" version="1">
             <value type="string">MemberId</value>
           </Fields>
@@ -803,9 +809,9 @@ Version:3.0.1.560-->
         </value>
       </ForeignKeyProperties>
     </value>
-    <value version="1" type="SDGTable">
+    <value version="3" type="SDGTable">
       <TableType>Generated</TableType>
-      <PopulationDetails version="1" type="PopulationDetails">
+      <PopulationDetails version="2" type="PopulationDetails">
         <PopulationType>RowCount</PopulationType>
         <RowCount>10749</RowCount>
         <ProportionTableExists>False</ProportionTableExists>
@@ -817,6 +823,8 @@ Version:3.0.1.560-->
       <Append>True</Append>
       <Name>Members</Name>
       <Schema>dbo</Schema>
+      <IsTemporal>False</IsTemporal>
+      <IdentityInsert>False</IdentityInsert>
       <Fields type="List&lt;SDGField&gt;" version="1">
         <value version="1" type="SDGField">
           <Name>Id</Name>
@@ -856,16 +864,16 @@ Version:3.0.1.560-->
                 <value type="string">False</value>
               </element>
               <element>
-                <key type="string">Seed</key>
-                <value type="string">3073</value>
-              </element>
-              <element>
                 <key type="string">NullsAllowed</key>
                 <value type="string">False</value>
               </element>
               <element>
                 <key type="string">NullProportion</key>
                 <value type="string">0.01</value>
+              </element>
+              <element>
+                <key type="string">Seed</key>
+                <value type="string">3073</value>
               </element>
             </GeneratorProperties>
           </Generator>
@@ -896,16 +904,16 @@ Version:3.0.1.560-->
                 <value type="string">False</value>
               </element>
               <element>
-                <key type="string">Seed</key>
-                <value type="string">3074</value>
-              </element>
-              <element>
                 <key type="string">NullsAllowed</key>
                 <value type="string">False</value>
               </element>
               <element>
                 <key type="string">NullProportion</key>
                 <value type="string">0.01</value>
+              </element>
+              <element>
+                <key type="string">Seed</key>
+                <value type="string">3074</value>
               </element>
             </GeneratorProperties>
           </Generator>
@@ -932,12 +940,8 @@ Version:3.0.1.560-->
                 <value type="string">([1-9][0-9][0-9]?) (North |East |West |South |||||||||||)(Green |White |Rocky ||||)(Nobel|Fabien|Hague|Oak|Second|First|Cowley|Clarendon|New|Old|Milton) (Way|Street|St.|Avenue|Road|Parkway|Freeway|Drive|Boulevard|Blvd.)</value>
               </element>
               <element>
-                <key type="string">Unique</key>
+                <key type="string">UseSequence</key>
                 <value type="string">False</value>
-              </element>
-              <element>
-                <key type="string">Seed</key>
-                <value type="string">3075</value>
               </element>
               <element>
                 <key type="string">NullsAllowed</key>
@@ -948,7 +952,11 @@ Version:3.0.1.560-->
                 <value type="string">0.01</value>
               </element>
               <element>
-                <key type="string">UseSequence</key>
+                <key type="string">Seed</key>
+                <value type="string">3075</value>
+              </element>
+              <element>
+                <key type="string">Unique</key>
                 <value type="string">False</value>
               </element>
             </GeneratorProperties>
@@ -976,12 +984,8 @@ Version:3.0.1.560-->
                 <value type="string">((APT|Appartment) [1-9][0-9]{0,2})|(Suite [1-9][0-9]{0,3})|((1st|2nd|3rd|[4-9]th|[1-9]{2,3}th) Floor)|((Sales|Customer|After Sales|Pre Sales|Post Sales|) (Group|Department))|((Lincoln|Washington|Jefferson|Roosevelt|Hamilton|Franklin|Marshall|Edison|Wilson|Madison|Roosevelt|Truman|Einstein|Anthony|Sanger|Foster) Building)</value>
               </element>
               <element>
-                <key type="string">Unique</key>
+                <key type="string">UseSequence</key>
                 <value type="string">False</value>
-              </element>
-              <element>
-                <key type="string">Seed</key>
-                <value type="string">3076</value>
               </element>
               <element>
                 <key type="string">NullsAllowed</key>
@@ -992,7 +996,11 @@ Version:3.0.1.560-->
                 <value type="string">0.4</value>
               </element>
               <element>
-                <key type="string">UseSequence</key>
+                <key type="string">Seed</key>
+                <value type="string">3076</value>
+              </element>
+              <element>
+                <key type="string">Unique</key>
                 <value type="string">False</value>
               </element>
             </GeneratorProperties>
@@ -1020,12 +1028,8 @@ Version:3.0.1.560-->
                 <value type="string">(Apartment|Basement|Building|Department|Floor|Front|Hangar|Lobby|Lot|Lower|Office|Penthouse|Pier|Rear|Room|Side|Slip|Space|Stop|Suite|Trailer|Unit|Upper)</value>
               </element>
               <element>
-                <key type="string">Unique</key>
+                <key type="string">UseSequence</key>
                 <value type="string">False</value>
-              </element>
-              <element>
-                <key type="string">Seed</key>
-                <value type="string">3076</value>
               </element>
               <element>
                 <key type="string">NullsAllowed</key>
@@ -1036,7 +1040,11 @@ Version:3.0.1.560-->
                 <value type="string">0.6</value>
               </element>
               <element>
-                <key type="string">UseSequence</key>
+                <key type="string">Seed</key>
+                <value type="string">3076</value>
+              </element>
+              <element>
+                <key type="string">Unique</key>
                 <value type="string">False</value>
               </element>
             </GeneratorProperties>
@@ -1061,15 +1069,11 @@ Version:3.0.1.560-->
             <GeneratorProperties type="Dictionary&lt;string, object&gt;" version="1">
               <element>
                 <key type="string">FileName</key>
-                <value type="string">C:\Program Files (x86)\Red Gate\SQL Data Generator 3\Config\UKCity.txt</value>
+                <value type="string">C:\Program Files (x86)\Red Gate\SQL Data Generator 4\Config\UKCity.txt</value>
               </element>
               <element>
                 <key type="string">Unique</key>
                 <value type="string">False</value>
-              </element>
-              <element>
-                <key type="string">Seed</key>
-                <value type="string">3078</value>
               </element>
               <element>
                 <key type="string">NullsAllowed</key>
@@ -1078,6 +1082,10 @@ Version:3.0.1.560-->
               <element>
                 <key type="string">NullProportion</key>
                 <value type="string">0.01</value>
+              </element>
+              <element>
+                <key type="string">Seed</key>
+                <value type="string">3078</value>
               </element>
             </GeneratorProperties>
           </Generator>
@@ -1108,16 +1116,16 @@ Version:3.0.1.560-->
                 <value type="string">False</value>
               </element>
               <element>
-                <key type="string">Seed</key>
-                <value type="string">3079</value>
-              </element>
-              <element>
                 <key type="string">NullsAllowed</key>
                 <value type="string">True</value>
               </element>
               <element>
                 <key type="string">NullProportion</key>
                 <value type="string">0.2</value>
+              </element>
+              <element>
+                <key type="string">Seed</key>
+                <value type="string">3079</value>
               </element>
             </GeneratorProperties>
           </Generator>
@@ -1144,12 +1152,8 @@ Version:3.0.1.560-->
                 <value type="string">United Kingdom|England|Britain</value>
               </element>
               <element>
-                <key type="string">Unique</key>
+                <key type="string">UseSequence</key>
                 <value type="string">False</value>
-              </element>
-              <element>
-                <key type="string">Seed</key>
-                <value type="string">3080</value>
               </element>
               <element>
                 <key type="string">NullsAllowed</key>
@@ -1160,7 +1164,11 @@ Version:3.0.1.560-->
                 <value type="string">0.01</value>
               </element>
               <element>
-                <key type="string">UseSequence</key>
+                <key type="string">Seed</key>
+                <value type="string">3080</value>
+              </element>
+              <element>
+                <key type="string">Unique</key>
                 <value type="string">False</value>
               </element>
             </GeneratorProperties>
@@ -1188,12 +1196,8 @@ Version:3.0.1.560-->
                 <value type="string">(AB|B|BA|BB|BD|BH|BL|BN|BR|BS|BT|CA|CB|CF|CH|CM|CO|CR|CT|CV|CW|DA|DE|DG|DH|DL|DN|DT|DY|E|EC|EH|EN|EX|FK|FY|G|GL|GU|H|HG|HP|HR|HS|HU|HX|IG|IM|IP|IV|KA|KT|KW|KY|L|LA|LD|LE|LL|LN|LS|LU|M|ME|MK|MK|N|NE|NG|NN|NP|NR|NW|OL|OX|PA|PE|PH|PL|PO|PR|RG|RH|RM|S|SA|SE|SG|SK|SL|SM|SN|SO|SP|SR|SS|ST|SW|SY|TA|TD|TF|TN|TQ|TR|TS|TW|UB|W|WA|WC|WD|WF|WN|WR|WS|WV|Y|ZE)([1-9]|[1-9][0-9]) [1-9][A-Z]{2}</value>
               </element>
               <element>
-                <key type="string">Unique</key>
+                <key type="string">UseSequence</key>
                 <value type="string">False</value>
-              </element>
-              <element>
-                <key type="string">Seed</key>
-                <value type="string">3081</value>
               </element>
               <element>
                 <key type="string">NullsAllowed</key>
@@ -1204,7 +1208,11 @@ Version:3.0.1.560-->
                 <value type="string">0.01</value>
               </element>
               <element>
-                <key type="string">UseSequence</key>
+                <key type="string">Seed</key>
+                <value type="string">3081</value>
+              </element>
+              <element>
+                <key type="string">Unique</key>
                 <value type="string">False</value>
               </element>
             </GeneratorProperties>
@@ -1232,12 +1240,8 @@ Version:3.0.1.560-->
                 <value type="string">[0-9]{3}(-|)[0-9]{3}(-|)[0-9]{4}</value>
               </element>
               <element>
-                <key type="string">Unique</key>
+                <key type="string">UseSequence</key>
                 <value type="string">False</value>
-              </element>
-              <element>
-                <key type="string">Seed</key>
-                <value type="string">3082</value>
               </element>
               <element>
                 <key type="string">NullsAllowed</key>
@@ -1248,7 +1252,11 @@ Version:3.0.1.560-->
                 <value type="string">0.01</value>
               </element>
               <element>
-                <key type="string">UseSequence</key>
+                <key type="string">Seed</key>
+                <value type="string">3082</value>
+              </element>
+              <element>
+                <key type="string">Unique</key>
                 <value type="string">False</value>
               </element>
             </GeneratorProperties>
@@ -1276,12 +1284,8 @@ Version:3.0.1.560-->
                 <value type="string">[0-9]{3}(-|)[0-9]{3}(-|)[0-9]{4}</value>
               </element>
               <element>
-                <key type="string">Unique</key>
+                <key type="string">UseSequence</key>
                 <value type="string">False</value>
-              </element>
-              <element>
-                <key type="string">Seed</key>
-                <value type="string">3082</value>
               </element>
               <element>
                 <key type="string">NullsAllowed</key>
@@ -1292,7 +1296,11 @@ Version:3.0.1.560-->
                 <value type="string">0.8</value>
               </element>
               <element>
-                <key type="string">UseSequence</key>
+                <key type="string">Seed</key>
+                <value type="string">3082</value>
+              </element>
+              <element>
+                <key type="string">Unique</key>
                 <value type="string">False</value>
               </element>
             </GeneratorProperties>
@@ -1320,12 +1328,8 @@ Version:3.0.1.560-->
                 <value type="string">[a-z]{4,8}([0-9]{0,3}|\.[a-z]{4,10})@([a-z]{4,9}\.)?([a-z-]{6})\.(org|com|net)</value>
               </element>
               <element>
-                <key type="string">Unique</key>
+                <key type="string">UseSequence</key>
                 <value type="string">False</value>
-              </element>
-              <element>
-                <key type="string">Seed</key>
-                <value type="string">3081</value>
               </element>
               <element>
                 <key type="string">NullsAllowed</key>
@@ -1336,7 +1340,11 @@ Version:3.0.1.560-->
                 <value type="string">0.7</value>
               </element>
               <element>
-                <key type="string">UseSequence</key>
+                <key type="string">Seed</key>
+                <value type="string">3081</value>
+              </element>
+              <element>
+                <key type="string">Unique</key>
                 <value type="string">False</value>
               </element>
             </GeneratorProperties>
@@ -1364,12 +1372,8 @@ Version:3.0.1.560-->
                 <value type="string">[a-z]{4,8}([0-9]{0,3}|\.[a-z]{4,10})@([a-z]{4,9}\.)?([a-z-]{6})\.(org|com|net)</value>
               </element>
               <element>
-                <key type="string">Unique</key>
+                <key type="string">UseSequence</key>
                 <value type="string">False</value>
-              </element>
-              <element>
-                <key type="string">Seed</key>
-                <value type="string">3085</value>
               </element>
               <element>
                 <key type="string">NullsAllowed</key>
@@ -1380,7 +1384,11 @@ Version:3.0.1.560-->
                 <value type="string">0.8</value>
               </element>
               <element>
-                <key type="string">UseSequence</key>
+                <key type="string">Seed</key>
+                <value type="string">3085</value>
+              </element>
+              <element>
+                <key type="string">Unique</key>
                 <value type="string">False</value>
               </element>
             </GeneratorProperties>
@@ -1455,10 +1463,6 @@ Version:3.0.1.560-->
                 <value type="string">False</value>
               </element>
               <element>
-                <key type="string">Seed</key>
-                <value type="string">3086</value>
-              </element>
-              <element>
                 <key type="string">NullsAllowed</key>
                 <value type="string">False</value>
               </element>
@@ -1466,17 +1470,21 @@ Version:3.0.1.560-->
                 <key type="string">NullProportion</key>
                 <value type="string">0.01</value>
               </element>
+              <element>
+                <key type="string">Seed</key>
+                <value type="string">3086</value>
+              </element>
             </GeneratorProperties>
           </Generator>
         </value>
       </Fields>
       <ForeignKeyProperties type="List&lt;ForeignKeyProperty&gt;" version="1" />
     </value>
-    <value version="1" type="SDGTable">
+    <value version="3" type="SDGTable">
       <TableType>Generated</TableType>
-      <PopulationDetails version="1" type="PopulationDetails">
+      <PopulationDetails version="2" type="PopulationDetails">
         <PopulationType>RowCount</PopulationType>
-        <RowCount>60000000</RowCount>
+        <RowCount>20000000</RowCount>
         <ProportionTableExists>False</ProportionTableExists>
         <Proportion>0</Proportion>
         <TimeToPopulate>0</TimeToPopulate>
@@ -1486,6 +1494,8 @@ Version:3.0.1.560-->
       <Append>False</Append>
       <Name>Archive</Name>
       <Schema>dbo</Schema>
+      <IsTemporal>False</IsTemporal>
+      <IdentityInsert>False</IdentityInsert>
       <Fields type="List&lt;SDGField&gt;" version="1">
         <value version="1" type="SDGField">
           <Name>Id</Name>
@@ -1529,16 +1539,16 @@ Version:3.0.1.560-->
                 <value type="string">False</value>
               </element>
               <element>
-                <key type="string">Seed</key>
-                <value type="string">4096</value>
-              </element>
-              <element>
                 <key type="string">NullsAllowed</key>
                 <value type="string">True</value>
               </element>
               <element>
                 <key type="string">NullProportion</key>
                 <value type="string">0.01</value>
+              </element>
+              <element>
+                <key type="string">Seed</key>
+                <value type="string">4096</value>
               </element>
             </GeneratorProperties>
           </Generator>
@@ -1573,16 +1583,16 @@ Version:3.0.1.560-->
                 <value type="string">25</value>
               </element>
               <element>
-                <key type="string">Seed</key>
-                <value type="string">4097</value>
-              </element>
-              <element>
                 <key type="string">NullsAllowed</key>
                 <value type="string">False</value>
               </element>
               <element>
                 <key type="string">NullProportion</key>
                 <value type="string">0.01</value>
+              </element>
+              <element>
+                <key type="string">Seed</key>
+                <value type="string">4097</value>
               </element>
             </GeneratorProperties>
           </Generator>
@@ -1609,12 +1619,8 @@ Version:3.0.1.560-->
                 <value type="string">($"NamesFirst.txt") ($"NamesLast.txt")</value>
               </element>
               <element>
-                <key type="string">Unique</key>
+                <key type="string">UseSequence</key>
                 <value type="string">False</value>
-              </element>
-              <element>
-                <key type="string">Seed</key>
-                <value type="string">4098</value>
               </element>
               <element>
                 <key type="string">NullsAllowed</key>
@@ -1625,7 +1631,11 @@ Version:3.0.1.560-->
                 <value type="string">0.01</value>
               </element>
               <element>
-                <key type="string">UseSequence</key>
+                <key type="string">Seed</key>
+                <value type="string">4098</value>
+              </element>
+              <element>
+                <key type="string">Unique</key>
                 <value type="string">False</value>
               </element>
             </GeneratorProperties>
@@ -1653,12 +1663,8 @@ Version:3.0.1.560-->
                 <value type="string">[0-9]{3}-[0-9]-[0-9]{2}-[0-9]{6}-[0-9]</value>
               </element>
               <element>
-                <key type="string">Unique</key>
-                <value type="string">True</value>
-              </element>
-              <element>
-                <key type="string">Seed</key>
-                <value type="string">4099</value>
+                <key type="string">UseSequence</key>
+                <value type="string">False</value>
               </element>
               <element>
                 <key type="string">NullsAllowed</key>
@@ -1669,8 +1675,12 @@ Version:3.0.1.560-->
                 <value type="string">0.01</value>
               </element>
               <element>
-                <key type="string">UseSequence</key>
-                <value type="string">False</value>
+                <key type="string">Seed</key>
+                <value type="string">4099</value>
+              </element>
+              <element>
+                <key type="string">Unique</key>
+                <value type="string">True</value>
               </element>
             </GeneratorProperties>
           </Generator>
@@ -1678,11 +1688,11 @@ Version:3.0.1.560-->
       </Fields>
       <ForeignKeyProperties type="List&lt;ForeignKeyProperty&gt;" version="1" />
     </value>
-    <value version="1" type="SDGTable">
+    <value version="3" type="SDGTable">
       <TableType>Generated</TableType>
-      <PopulationDetails version="1" type="PopulationDetails">
+      <PopulationDetails version="2" type="PopulationDetails">
         <PopulationType>RowCount</PopulationType>
-        <RowCount>50000000</RowCount>
+        <RowCount>16000000</RowCount>
         <ProportionTableExists>False</ProportionTableExists>
         <Proportion>0</Proportion>
         <TimeToPopulate>0</TimeToPopulate>
@@ -1692,6 +1702,8 @@ Version:3.0.1.560-->
       <Append>False</Append>
       <Name>Magazines</Name>
       <Schema>dbo</Schema>
+      <IsTemporal>False</IsTemporal>
+      <IdentityInsert>False</IdentityInsert>
       <Fields type="List&lt;SDGField&gt;" version="1">
         <value version="1" type="SDGField">
           <Name>Id</Name>
@@ -1735,16 +1747,16 @@ Version:3.0.1.560-->
                 <value type="string">30</value>
               </element>
               <element>
-                <key type="string">Seed</key>
-                <value type="string">5121</value>
-              </element>
-              <element>
                 <key type="string">NullsAllowed</key>
                 <value type="string">False</value>
               </element>
               <element>
                 <key type="string">NullProportion</key>
                 <value type="string">0.01</value>
+              </element>
+              <element>
+                <key type="string">Seed</key>
+                <value type="string">5121</value>
               </element>
             </GeneratorProperties>
           </Generator>
@@ -1771,12 +1783,8 @@ Version:3.0.1.560-->
                 <value type="string">($"NamesFirst.txt") ($"NamesLast.txt")</value>
               </element>
               <element>
-                <key type="string">Unique</key>
+                <key type="string">UseSequence</key>
                 <value type="string">False</value>
-              </element>
-              <element>
-                <key type="string">Seed</key>
-                <value type="string">5122</value>
               </element>
               <element>
                 <key type="string">NullsAllowed</key>
@@ -1787,7 +1795,11 @@ Version:3.0.1.560-->
                 <value type="string">0.01</value>
               </element>
               <element>
-                <key type="string">UseSequence</key>
+                <key type="string">Seed</key>
+                <value type="string">5122</value>
+              </element>
+              <element>
+                <key type="string">Unique</key>
                 <value type="string">False</value>
               </element>
             </GeneratorProperties>
@@ -1815,12 +1827,8 @@ Version:3.0.1.560-->
                 <value type="string">[0-9]{14}</value>
               </element>
               <element>
-                <key type="string">Unique</key>
+                <key type="string">UseSequence</key>
                 <value type="string">False</value>
-              </element>
-              <element>
-                <key type="string">Seed</key>
-                <value type="string">5123</value>
               </element>
               <element>
                 <key type="string">NullsAllowed</key>
@@ -1831,7 +1839,11 @@ Version:3.0.1.560-->
                 <value type="string">0.01</value>
               </element>
               <element>
-                <key type="string">UseSequence</key>
+                <key type="string">Seed</key>
+                <value type="string">5123</value>
+              </element>
+              <element>
+                <key type="string">Unique</key>
                 <value type="string">False</value>
               </element>
             </GeneratorProperties>
@@ -1847,6 +1859,7 @@ Version:3.0.1.560-->
     <FireDeleteTriggers>False</FireDeleteTriggers>
     <CheckConstraints>True</CheckConstraints>
     <ShuffleBlockSize>1000</ShuffleBlockSize>
+    <AutoGeneratePreviews>True</AutoGeneratePreviews>
   </ProjectOptions>
   <PreScripts type="SQLScripts" version="1">
     <value version="1" type="SQLScript">
